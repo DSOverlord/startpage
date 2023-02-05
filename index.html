@@ -4,11 +4,11 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="icons/favicon.png" />
   </head>
   <body>
     <div class="everything">
-      <div id="time" class="time"></div>
+      <img src="icons/prewiev.svg" width="400" height="250" class="prewiev">
       <form action="https://duckduckgo.com/" method="GET">
         <input
           autofocus
@@ -23,25 +23,25 @@
         
         <div class="link">
           <ul>
-            <li><a href="https://www.aliexpress.com/">aliexpress</a></li>
-            <li><a href="https://vk.com/">vk</a></li>
-            <li><a href="https://www.youtube.com/">youtube</a></li>
-            <li><a href="http://mangalib.me/">mangalib</a></li>
+            <li><a href="https://www.aliexpress.com/">Aliexpress</a></li>
+            <li><a href="https://vk.com/">VK</a></li>
+            <li><a href="https://www.youtube.com/">YouTube</a></li>
+            <li><a href="http://mangalib.me/">Mangalib</a></li>
           </ul>
         </div>
         
         <div class="link">
           <ul>
-            <li><a href="http://remanga.org/">remanga</a></li>
-            <li><a href="http://github.com/">github</a></li>
-            <li><a href="https://gitflic.ru/user/dsoverlord/projects">gitflic</a></li>
-            <li><a href="https://www.deepl.com/translator">deepl</a></li>
+            <li><a href="http://remanga.org/">Remanga</a></li>
+            <li><a href="http://github.com/">GitHub</a></li>
+            <li><a href="https://gitflic.ru/user/dsoverlord/projects">GitFlic</a></li>
+            <li><a href="https://www.deepl.com/translator">DeepL</a></li>
           </ul>
         </div>
         
         <div class="link">
           <ul>
-            <li><a href="https://search.nixos.org/packages?channel=unstable">pkgs</a></li>
+            <li><a href="https://search.nixos.org/packages?channel=unstable">nixpkgs</a></li>
             <li><a href="https://search.nixos.org/options?channel=unstable">options</a></li>
             <li><a href="https://nix-community.github.io/home-manager/options.html">home-options</a></li>
             <li><a href="https://doc.rust-lang.ru/async-book/01_getting_started/02_why_async.html">rust</a></li>
@@ -50,21 +50,5 @@
         
       </div>
     </div>
-    <script>
-      function updateClock() {
-        let date = new Date();
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let ampm = hours >= 12 ? "pm" : "am";
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        let time = hours + ":" + minutes + " " + ampm;
-        document.getElementById("time").innerHTML = time;
-        setTimeout(updateClock, 1000);
-      }
-
-      updateClock();
-    </script>
   </body>
 </html>
